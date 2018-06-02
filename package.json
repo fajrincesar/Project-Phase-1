@@ -1,23 +1,23 @@
 {
-  "name": "rin2",
-  "version": "0.1.0",
-  "private": true,
-  "dependencies": {
-    "axios": "^0.18.0",
-    "firebase": "^4.13.1",
-    "firebase-tools": "^3.18.4",
-    "react": "^16.2.0",
-    "react-dom": "^16.2.0",
-    "react-reveal": "^1.2.1",
-    "react-router-dom": "^4.2.2",
-    "react-scripts": "1.1.1",
-    "semantic-ui-react": "^0.80.0",
-    "sweetalert": "^2.1.0"
-  },
+  "name": "exprestosql2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "exprestomysql"
+  ],
+  "author": "rin",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "cors": "^2.8.4",
+    "express": "^4.16.3",
+    "file-system": "^2.2.2",
+    "mysql": "github:mysqljs/mysql",
+    "nodemon": "^1.17.3",
+    "jsonwebtoken": "^8.2.1"
   }
 }
