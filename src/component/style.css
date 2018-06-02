@@ -1,0 +1,161 @@
+td {
+border: 1px solid black;
+}
+
+table{
+    padding: 10px;
+    margin-left: 100px;
+}
+
+a {
+    color: silver;
+}
+
+h4, h2, h3, p {
+    font-family: 'Rajdhani';
+    font-size: 150%;
+}
+
+#titlecard {
+    font-size: 140%;
+    padding: 10px;
+}
+
+#card-item {
+    
+}
+
+h2 {
+    font-size: 250%;
+}
+.label {
+    font-family: 'Rajdhani';
+}
+.jumbotron {
+    background: url(https://images7.alphacoders.com/346/346420.jpg);
+    background-size: 100%;
+}
+.lead {
+    color:whitesmoke;
+}
+
+.jumbotron-fluid {
+    background: url(https://factualfacts.com/wp-content/uploads/2017/05/chocolate.jpg);
+    background-size: 100%; 
+}
+
+#galery{
+    max-width: 1170px;
+    margin-top: 50px;
+    margin-right: 50px;
+    display: grid;
+    grid-template-columns: 30% 30% 30%;
+    grid-auto-rows: 200px;
+    grid-gap: 3px;
+    grid-template-areas: "blok1 blok2 blok3" ". . ." "blok7 blok7 .";
+}
+
+#box1{
+    grid-area: blok1;
+    background-image: url("./../pict/bar2.jpg");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: top;
+ }
+#box2{
+    grid-area: blok2;
+    background-image: url("http://longwallpapers.com/Desktop-Wallpaper/chocolate-wallpaper-hd-For-Desktop-Wallpaper.jpg");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: top;
+}
+#box3{
+    grid-area: blok3;
+    background-image: url("https://bsbproduction.s3.amazonaws.com/portals/6284/contentrotator/contentrotator636360750709546075.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+#box4{
+    background-image: url("https://www.cambridgechocolates.co.uk/ekmps/shops/228e84/images/chocolate-robots-154-p[ekm]1000x750[ekm].jpg");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+#box5{
+    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSV4CdbBPpAeKUBSNvK7eP34zknVJM7hNwpo6pGAz47xFBPt1rzsA");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+#box6{
+    background-image: url("./../pict/ch.jpg");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center; 
+}
+#box7{
+    grid-area: blok7;
+    background-image: url("./../pict/cobar5.jpg");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+#box8{
+    background-image: url("https://i.kinja-img.com/gawker-media/image/upload/s--8H0c__11--/c_scale,f_auto,fl_progressive,q_80,w_800/ki4ltbmkvhrn2rf7c27j.gif");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center; 
+}
+.nav-item:hover{
+    transition: 3s;
+    background-color: chocolate;
+}
+/* Link:hover{
+    transition: 3s;
+    background-color: chocolate;
+} */
+
+#profile{
+    margin-top: 90px;
+}
+
+#eventext {
+    font-size: 100%;
+    text-align: center;
+}
+
+.checked {
+    color: orange;
+}
+
+.sign{
+    cursor: pointer;
+}
+
+.modal-body {
+    padding-right: 0px;
+}
+
+.frm, #reg {
+     cursor: pointer;
+}
+
+.box {
+    background: rgba(173, 149, 12, 0.158);
+    width: 350px;
+    height: 520px;
+    border-radius: 10px;
+    padding-top: 40px;
+}
+
+.avatar {
+    border-radius: 50%;
+    width: 140px;
+    height: 150px;
+}
+
+table, tbody, tr, th, td {
+    border: white;
+}
+

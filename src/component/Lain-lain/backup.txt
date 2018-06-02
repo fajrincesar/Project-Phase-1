@@ -1,0 +1,85 @@
+import React, { Component } from 'react';
+import swal from 'sweetalert';
+import { Link } from 'react-router-dom';
+import axios from 'axios';
+import Form2 from './Form2';
+
+
+class Form extends Component {
+  constructor(){
+    super();
+    this.state={stud:[]};
+  }
+  
+  componentDidMount(){
+    axios.get('http://localhost:4231/data/xget')
+    .then((ambildata)=>{
+      console.log(ambildata.data);
+       this.setState({
+         stud:ambildata.data,
+       })
+    })
+  };
+  
+  delete = (id)=>{
+    axios.delete('http://localhost:4231/data/'+id)
+    .then(res=>{
+        console.log(res)
+        window.location.reload()
+        swal('item has been remove')
+    })
+}
+  render() {
+     const data=this.state.stud.map((item, index)=>{
+       var nid=item.nmb
+       var ck=item.item
+       var prc=item.price
+       var id= item._id
+       return <tbody key={index}><td>{nid}</td> <td>{ck}</td> <td>IDR {prc}</td> <a href="#" onClick={() => { this.delete(id) }} ><i className="fas fa-trash-alt"  ></i></a> </tbody>
+          });
+     
+    return (
+          <div>
+              <div className="container" style={{marginTop:"120px"}}>
+                <ul className="nav nav-tabs" role="tablist">
+                  <li className="nav-item">
+                    <a className="nav-link active" data-toggle="tab" href="#home" role="tab">Detail Item</a>
+                  </li>
+                </ul>
+                <div className="tab-content">
+                  <div className="tab-pane active" id="home" role="tabpanel">
+                      <div className="row" >
+                        <table className="table" style={{marginLeft:"12px"}}>
+                              <tr>
+                                <th scope="col">Order ID</th>
+                                <th scope="col">Item</th>
+                                <th scope="col">Harga</th>
+                              </tr>
+                                {data}
+                        </table>
+                      </div>              
+                      {/* <Link to="/Form2" className="btn btn-outline-warning btn-block" style={{width:'150px'}}>Continue</Link><br/><br/>     */}
+                      <div style={{marginLeft:"10px"}}><Form2 /></div>
+                  </div>                    
+                </div>
+              </div>
+          </div>
+    );
+  }
+}
+
+export default Form;
+
+=====================================
+constructor(){
+        super();
+        this.state = {status: false}
+        this.onClick = this.onClick.bind(this)
+    }
+    onClick = ()=>{
+        this.setState({
+            status: !this.state.status
+        })
+    }
+
+<Link to="/Login" className="btn btn-outline-warning" onClick={this.onClick}><i className="fa fa-user"></i>{label}</Link>

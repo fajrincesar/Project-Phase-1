@@ -1,0 +1,32 @@
+ALTER TABLE kursi ADD FOREIGN KEY (teater_id) REFERENCES teater(id);
+
+create table nama_table (
+    no int,
+    nama varchar(30),
+    usia int,
+    berat float(3,1),
+    kota text,
+    th year,
+    data_in timestamp,
+    primary key (no)
+);
+
+insert into nama_table values(
+    null,
+    'nama',
+    42,
+    45.0,
+    'jakarta',
+    2001,
+    null
+);
+alter table nama_table add column nama_column int after kota;
+
+alter table nama_table drop column gaji;
+
+update nama_table set th = 2000;
+
+update nama_table set th = 2000 where no = 1
+
+delete from nama_table where no = 1;
+

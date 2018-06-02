@@ -1,0 +1,34 @@
+ constructor(){
+    super();
+    this.state={cuaca:[]};
+  }
+   componentDidMount(){
+     axios.get('http://api.openweathermap.org/data/2.5/forecast?q=Jakarta&APPID=22250ae68da3816fff2debd2aa97f1ce')
+     .then((ambildata)=>{
+       console.log(ambildata.data.list);
+        this.setState({
+          cuaca:ambildata.data.list,
+        })
+     })
+   };       
+  render() {
+      var datacuaca=this.state.cuaca.map((item, index)=>{
+        var temp=[item.main.temp] //item.weather[0].description,item.wind.deg,item.wind.speed].join(' - ')
+        var weather=[item.weather[0].description]
+        var wind=[item.wind.deg,item.wind.speed].join(' - ')
+        return <tr key={index}><td>{temp}</td><td>{weather}</td><td>{wind}</td></tr>
+      })
+    return (
+       <div>
+         <br></br>
+         <table>
+           <tr>
+             <td>Temp</td>
+             <td>Weather</td>
+             <td>Wind Deg and Speed</td>
+            </tr>
+            {datacuaca}
+          </table>
+       </div>
+    )
+  }
